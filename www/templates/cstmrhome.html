@@ -1,0 +1,61 @@
+<ion-view view-title="Daily Food" cache-view="false" hide-back-button="true">
+
+<ion-content class="has-header background" ng-controller="DashCtrl" padding="true">
+    <br> 
+
+  
+   
+     <ion-slide-box slide-interval="3000" does-continue="true"
+                               auto-play="true" style="height:250px;" class="background">  
+ 
+       
+        <ion-slide>
+            <center><img src="img/Food1.png" class="fullscreen-image"></center>
+        </ion-slide>
+        <ion-slide>
+            <center><img src="img/Food2.png" class="fullscreen-image"></center>
+        </ion-slide>
+        <ion-slide>
+            <center><img src="img/Food3.png" class="fullscreen-image"></center>
+        </ion-slide>
+        <ion-slide>
+            <center><img src="img/Food4.png" class="fullscreen-image"></center>
+        </ion-slide>
+           <ion-slide>
+            <center><img src="img/Food5.png" class="fullscreen-image"></center>
+        </ion-slide>
+           <ion-slide>
+            <center><img src="img/Food6.png" class="fullscreen-image"></center>
+        </ion-slide>
+        </ion-slide-box>
+
+<center><h3 style="color:#f16539;">TODAY'S MENU</h3></center>
+<hr style="border-color:#f16539;">
+<br>
+<div ng-repeat="data in detailcxm">
+<div style="margin-left: 15px">
+<li>{{data.qroti}} {{data.roti}}</li>
+<li>{{data.sabji}}</li>
+<li>{{data.rice}}</li>
+<li>{{data.other}}</li>
+</div>
+<div class="row">
+  <div class="col card" style="background-color: #262627;"><center>Full Tiffin: &#8377&nbsp;{{data.fprice}}</center></div>&nbsp;&nbsp;
+   <div class="col card"  style="background-color: #262627;"><center>Half Tiffin: &#8377&nbsp;{{data.hprice}}</center></div>
+</div> 
+
+<br>
+
+
+<div ng-show="ddd">{{data.id}}</div>
+<center>
+<button class="button button-outline button-assertive" ng-click="order(data.id, data.qroti, data.roti, data.sabji, data.rice, data.other,data.fprice,data.hprice)" style="width:93%; margin-left: -4.5px;">
+  Order Now
+</button>
+</center>
+</div>
+
+    </ion-content>
+</ion-view>
+  
+     

@@ -1,0 +1,101 @@
+<ion-view view-title="Order Detail" hide-back-button="true">
+
+ <ion-nav-bar class="bar-stable">
+ </ion-nav-bar>
+
+    <ion-nav-buttons side="left">
+    
+      <button class="button button-icon button-clear ion-android-arrow-back" ng-controller="NavigateCtrl" ng-click="adminorderback()">
+      </button>
+  
+    </ion-nav-buttons>
+
+
+<ion-content ng-controller="AdminCtrl" class="has-header background" padding="true">
+  <br><br>   
+     <div ng-repeat="data in detailcxm11">
+        
+             
+                     <div ng-show="zzz">{{data.id}}</div>
+                    
+                    <p>&nbsp;&nbsp;<span  style="color: #8dc112;">Customer Name:</span> <span>{{data.uname}}</span>
+                     </p>
+                     <hr>
+
+
+                      <p>&nbsp;&nbsp;<span style="color: #8dc112;">Order Date:</span> <span>{{data.cdate}}</span>
+                      </p>
+
+                    
+                    <p>&nbsp;&nbsp;<span style="color: #8dc112;">Order Time:</span> <span>{{data.ctime}}</span>
+                     </p>
+                     <hr>
+
+                    
+                      
+                    
+                     <!---<p style="font-family: initial;">&nbsp;&nbsp;Seller: {{data.csname}}
+                     </p>-->
+
+                  
+                     <p>&nbsp;&nbsp;<span style="color: #8dc112;">Quantity:</span> <span>{{data.qty}} {{data.tfntype}} Tifin</span>
+                     </p>
+
+                    <hr>
+
+                   
+                     <p>&nbsp;&nbsp;<span style="color: #8dc112;">Time:</span> {{data.tfntime}}
+                     </p>
+                     <hr>
+
+                     
+                     <p>&nbsp;&nbsp;<span style="color: #8dc112;">Included In Tifin:</span> 
+                     <p>&nbsp;&nbsp;{{data.rotyquantity}}&nbsp;{{data.rotiname}}</p>
+                     <p>&nbsp;&nbsp;{{data.sabjiname}}</p>
+                     <p>&nbsp;&nbsp;{{data.ricename}}</p>
+                     <p>&nbsp;&nbsp;{{data.othername}} 
+                     </p>
+                     <hr>
+
+                      <p>
+                      &nbsp;&nbsp;<span style="color: #8dc112;">Delivery Address:</span> 
+                      <p>&nbsp;&nbsp;{{data.add1}}</p>
+                      <p>&nbsp;&nbsp;{{data.add2}}</p>
+                      <p>&nbsp;&nbsp;{{data.add3}}</p>
+                      <p>&nbsp;&nbsp;Mobile Number: {{data.add4}}</p>
+                      
+                      <hr>  
+
+                     <p ng-if="data.payment_id==='cash'">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8dc112;">Payment Mode:</span> <span>Cash On Delivery</span></p>
+
+                    <p ng-if="data.payment_id!='cash'">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8dc112;">Payment Mode:</span> <span>Online</span></p>
+
+                     <p ng-if="data.payment_status==='awaited'">&nbsp;&nbsp;<span style="color: #8dc112;">Payment Status:</span> <span>Awaited</span></p>
+
+                     <p ng-if="data.payment_status==='completed'">&nbsp;&nbsp;<span style="color: #8dc112;">Payment Status:</span> <span>Completed</span></p> 
+                    
+                     <p>&nbsp;&nbsp;<span style="color: #8dc112;">Total Amount:</span> &#8377&nbsp;<span>{{data.price}}</span>
+                     </p>
+                     <hr>
+                     <br>  
+                      <center> 
+                      <button class="button button-outline button-assertive" ng-click="takeorder(data.id)" style="color: #f16539; border-color:#f16539;">ADD TO DELIVERY LIST</button></center>
+
+ 
+                      <!---<center>
+                      <button class="button button-clear button-assertive" ng-click="takeorder(data.id,data.csname,data.uname)" style="color: #88b913;">TAKE ORDER</button>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button class="button button-clear button-assertive" ng-controller = "NavigateCtrl" ng-click="deleteorder(data.id)" >DELETE</button>
+                       </center>-->
+    
+
+                      
+             </div>
+      
+     </div>
+      
+
+   
+
+</ion-content>
+</ion-view>

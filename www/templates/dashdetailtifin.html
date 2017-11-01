@@ -1,0 +1,93 @@
+<ion-view view-title="Daily Food" hide-back-button="true">
+
+<ion-nav-bar class="bar-stable">
+      
+       </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+    <button class="button button-icon button-clear ion-android-arrow-back" ng-controller="NavigateCtrl" ng-click="dashback()">
+    </button>
+  
+          </ion-nav-buttons>
+<ion-content ng-controller="DashCtrl" class="has-header">
+     
+
+     
+      <div ng-repeat="data in dashdetailcxm">
+     <div class="card">
+     <div class="item item-text-wrap" style="background-color:beige;">
+     <p>Seller : {{data.name}}<br>
+     City : {{data.city}}<br>
+     Area : {{data.area}}<br>
+     Contact : {{data.contact}}<br>
+     Price of Full Tifin : Rs.{{data.fprice}}<br>
+     Price of Half Tifin : Rs.{{data.hprice}}</p>
+     <div ng-show="ddd">{{data.id}}</div>
+     </div>
+     </div>
+
+
+     <div class="card">
+     <div class="item item-text-wrap">
+      
+  
+      <h2 style="color:cadetblue;">Monday menu</h2>
+     <p>{{data.roti}} Roti<br>
+     Sabji: {{data.sabji}}<br>
+     {{data.rice}}<br>
+     {{data.other}}</p>
+     
+     <br>
+
+<!---     <h2 style="color:cadetblue;">Tuesday menu</h2>
+     <p>{{data.tuesroti}} Roti<br>
+     Sabji: {{data.tuessabji}}<br>
+     {{data.tuesrice}}<br>
+     {{data.tuesother}}</p>
+
+     <br>
+     
+     <h2 style="color:cadetblue;">Wednesday menu</h2>
+     <p>{{data.wedroti}} Roti<br>
+     Sabji: {{data.wedsabji}}<br>
+     {{data.wedrice}}<br>
+     {{data.wedother}}</p>
+
+     <br>
+     
+     <h2 style="color:cadetblue;">Thursday menu</h2>
+     <p>{{data.thuroti}} Roti<br>
+     Sabji: {{data.thusabji}}<br>
+     {{data.thurice}}<br>
+     {{data.thuother}}</p>
+
+     <br>
+     
+     <h2 style="color:cadetblue;">Friday menu</h2>
+     <p>{{data.friroti}} Roti<br>
+     Sabji: {{data.frisabji}}<br>
+     {{data.fririce}}<br>
+     {{data.friother}}</p>
+
+     <br>
+     
+     <h2 style="color:cadetblue;">Saturday menu</h2>
+     <p>{{data.satroti}} Roti<br>
+     Sabji: {{data.satsabji}}<br>
+     {{data.satrice}}<br>
+     {{data.satother}}</p>
+
+   
+<br>
+<br>-->
+  
+
+  
+      </div>
+  </div>
+</p>
+                  
+
+</ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+<ion-view view-title="Daily Food" cache-view="false" hide-back-button="true">
+
+
+<ion-content  class="has-header">
+<br>
+ <ul class="list">
+                <li class="item" ng-repeat = "data in atfnpln" ng-click="plandetail(data.id)">
+                  {{data.uname}} request {{data.csname}} Tifin from {{data.fdate}} to {{data.tdate}}
+                  <div ng-show="ccv">{{data.id}}</div>
+                </li>
+          </ul> 
+
+<div ng-show="cfcc" style="color:red;"><center>No Customer Plan</center></div>
+   
+
+  </ion-content>
+</ion-view>

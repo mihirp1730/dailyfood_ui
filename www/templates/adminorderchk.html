@@ -1,0 +1,43 @@
+<ion-view view-title="Dashboard" cache-view="false" hide-back-button="true" ng-init="setInterval()">
+   
+
+  <ion-content  class="has-header background2" padding="true">
+<div class="list">
+<br><br>
+      <!---<ul class="list">
+                <li class="item" ng-repeat = "data in atfn" ng-click="orderdetail(data.id)">
+                  {{data.uname}} request {{data.csname}} Tifin<div ng-show="ccv">{{data.id}}</div>
+                </li>
+          </ul>-->
+  <center><h4 style="color:#f16539;">ORDER SUMMARY</h4></center>
+  <hr>      
+  <p>&nbsp;&nbsp;&nbsp;Full Tifin: {{full}}</p>
+  <p>&nbsp;&nbsp;&nbsp;Half Tifin: {{half}}</p>
+
+  <hr>
+  <p>&nbsp;&nbsp;&nbsp;Total Number Of Order: {{total}}</p>
+  <hr>
+  <center><h4 style="color:#f16539;">TODAY'S CUSTOMER</h4></center>
+  <hr>
+<br>
+  
+<div class = "card list" id = "bbb" ng-repeat="data in atfn" style="background-color: #282827;">
+  <a class="item item-icon-right" ng-click="orderdetail(data.id)">
+   
+    {{data.uname}}<span style="float:right; color:#f16539;" ng-if="data.active==='Pending'">{{data.active}}</span>
+    <span style="float:right; color:yellow;" ng-if="data.active==='Processing'">{{data.active}}</span>
+    <span style="float:right; color:blue;" ng-if="data.active==='Dispatched'">{{data.active}}</span>
+    <span style="float:right; color:green;" ng-if="data.active==='Delivered'">{{data.active}}</span>
+            <span ng-show="dddd">{{data.id}}</span>
+   
+    <i class="icon ion-arrow-right-b"></i>
+  </a>
+</div>
+
+
+
+           <br><br><br><br>
+          <div ng-show="alrt" style="color:#f16539;"><center>No Order Request</center></div>
+</div>
+   </ion-content>
+ </ion-view>

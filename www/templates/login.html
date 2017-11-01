@@ -1,0 +1,84 @@
+
+<ion-view view-title="Log In" cache-view="false" hide-back-button="true" >
+
+ <ion-nav-bar class="bar-stable">
+      
+       </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+    <button class="button button-icon button-clear ion-android-arrow-back" ng-click="loginhomeback()">
+    </button>
+  
+          </ion-nav-buttons>
+
+<ion-content ng-controller="AppCtrl" class="background1" padding="true">
+
+  
+
+<br>
+
+ 
+
+<div class="list">
+
+
+<div class=" yourElement animated rollIn">  
+ 
+<center><img src="img/logo.png"></center>
+  
+ </div> 
+<form ng-submit="login(unamell,pswrdll)">
+   
+<label class="item-input item-floating-label">
+    <span class="input-label">Username</span>
+  <input type="text" placeholder="Username" ng-model="unamell" style="border-top-color: transparent;">
+</label>
+
+<hr>
+
+<label class="item-input item-floating-label">
+    <span class="input-label">Password</span>
+  <input type="password" placeholder="Password" ng-model="pswrdll">
+</label>
+
+<hr>
+
+    
+ <br>
+
+
+<center>
+<button class="button button-outline button-assertive" type="submit" style="width:93%; margin-left: -6.5px;">
+  Log In
+</button></center>
+
+</form>
+ 
+   <!--- <button class="button button-block button-positive" ng-controller="LoginCtrl" ng-click="mailsend(emilrr)" style="background-color: #C54136; width:95%;">send</button>-->
+
+<center><button class="button button-clear button-assertive" ng-click="newuser()" style="color:#f16539;">
+  <u>New user</u>
+</button></center>
+ <center>
+<button class="button button-clear button-assertive" ng-click="frgt()" style="color:#f16539;">
+  <u>Forgott password?</u>
+</button>
+</center>
+</div>  
+
+
+  
+
+
+
+
+</div>
+
+  
+ 
+  </ion-content>
+</ion-view>
+
+
+<!-- style="background: url(img/login.jpg) center; background-size: cover;"  -->

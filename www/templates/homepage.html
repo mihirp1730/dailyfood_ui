@@ -1,0 +1,130 @@
+
+<ion-view view-title="Sign-In" hide-back-button="true">
+
+
+<ion-content class="background1" padding="true">
+
+<br>
+
+<div class="list">
+
+
+ <center><h3 style="color:#f16539;" class="homeElement animated rollIn">WELCOME TO DAILY FOOD</h3></center>
+ 
+
+<ion-slide-box slide-interval="4500" does-continue="true" 
+                               auto-play="true" class="icon-slide" style="height:33px;">
+
+<ion-slide>
+<center><p style="color:#8dc112; font-size:16.4px; word-wrap: break-word;">We Welcome Your Order</p></center><br>
+ </ion-slide>
+ <ion-slide>
+<center><p style="color:#8dc112;font-size:16.4px; word-wrap: break-word;">{{lunch_time}}</p></center><br>
+ </ion-slide>
+
+ <ion-slide>
+<center><p style="color:#8dc112;font-size:16.4px; word-wrap: break-word;">{{lunch_order}}</p></center><br>
+ </ion-slide>
+
+ <ion-slide>
+<center><p style="color:#8dc112; font-size:16.4px; word-wrap: break-word;">{{dinner_time}}</p></center><br>
+ </ion-slide>
+
+ <ion-slide>
+<center><p style="color:#8dc112;font-size:16.4px; word-wrap: break-word;">{{dinner_order}}</p></center><br>
+ </ion-slide>
+ </ion-slide-box>
+
+<hr style="border-color:#f16539;">                                
+<ion-slide-box slide-interval="4500" does-continue="true"
+                               auto-play="true" style="height:210px;" class="background">  
+ 
+        <ion-slide>
+            <center><img src="img/Food1.png" class="fullscreen-image"></center>
+        </ion-slide>
+        <ion-slide>
+            <center><img src="img/Food2.png" class="fullscreen-image"></center>
+        </ion-slide>
+        <ion-slide>
+            <center><img src="img/Food3.png" class="fullscreen-image"></center>
+        </ion-slide>
+        <ion-slide>
+            <center><img src="img/Food4.png" class="fullscreen-image"></center>
+        </ion-slide>
+           <ion-slide>
+            <center><img src="img/Food5.png" class="fullscreen-image"></center>
+        </ion-slide>
+           <ion-slide>
+            <center><img src="img/Food6.png" class="fullscreen-image"></center>
+        </ion-slide>
+          
+       
+        </ion-slide-box>
+
+<center><h3 style="color:#f16539;">TODAY'S MENU</h3></center>
+
+<hr  style="border-color:#f16539;">
+<br>
+
+<div ng-repeat="data in detailcxm">
+
+<div style="margin-left: 15px">
+<li>{{data.qroti}} {{data.roti}}</li>
+<li>{{data.sabji}}</li>
+<li>{{data.rice}}</li>
+<li>{{data.other}}</li>
+</div>  
+
+
+<div class="row">
+  <div class="col card" style="background-color: #262627;"><center>Full Tiffin: &#8377&nbsp;{{data.fprice}}</center></div>&nbsp;&nbsp;
+   <div class="col card"  style="background-color: #262627;"><center>Half Tiffin: &#8377&nbsp;{{data.hprice}}</center></div>
+</div>  
+
+
+
+ 
+
+
+
+<center>
+  <button class="button button-outline button-assertive" ng-click="lout()" style="color: #8dc112; border-color:#8dc112;">ORDER NOW</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button class="button button-outline button-assertive" ng-click="signup()"
+   style="color: #f16539;" >NEW USER</button>
+</center>
+<br>
+<hr style="border-color:#f16539;">
+
+&nbsp;&nbsp;&nbsp;<button class="button button-clear button-assertive" ng-click="reviewpage()" style="color: #f16539;"><u>REVIEWS</u></button><br>
+
+&nbsp;&nbsp;&nbsp;<button class="button button-clear button-lite" ng-click="openBrowser()" style="color: #f16539;"><u>ABOUT US</u></button><br>
+
+
+&nbsp;&nbsp;&nbsp;<button class="button button-clear button-lite" ng-click="contact()" style="color: #f16539;"><u>CONTACT US</u></button><br>
+
+
+&nbsp;&nbsp;&nbsp;<button class="button button-clear button-lite" ng-click="privacyurl()" style="color: #f16539;"><u>PRIVACY POLICIES</u></button><br>
+
+
+&nbsp;&nbsp;&nbsp;<button class="button button-clear button-lite" ng-click="xzxz()" style="color: #f16539;"><u>DELIVERY POLICIES</u></button><br>
+
+
+&nbsp;&nbsp;&nbsp;<button class="button button-clear button-lite" ng-click="termsurl()" style="color: #f16539;"><u>TERMS & CONDITIONS</u></button><br>
+
+
+&nbsp;&nbsp;&nbsp;<button class="button button-clear button-lite" ng-click="refundurl()" style="color: #f16539;"><u>REFUND/CANCELLATION POLICIES</u></button>
+
+
+
+
+</div>
+
+</div>
+
+
+ 
+  </ion-content>
+</ion-view>
+
+
+<!-- style="background: url(img/login.jpg) center; background-size: cover;"  -->

@@ -1,0 +1,35 @@
+<ion-view view-title="Edit Review" cache-view="false" hide-back-button="true">
+<ion-nav-bar class="bar-stable">
+      
+       </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+    <button class="button button-icon button-clear ion-android-arrow-back" ng-click="reviewback_edit()">
+    </button>
+  
+</ion-nav-buttons>
+
+ <ion-content class="has-header background2">
+    <br><br><br>
+
+  <p style="margin-left: 19px;">{{tname}}</p> 
+  <br> 
+    <center> 
+   
+<textarea rows="6" ng-model="review_edit" style="font-size:17px; width:90%; background-color: #262627;"></textarea>
+ </ion-item>
+   </center>   
+
+   <ionic-ratings ratingsobj='ratingsObject' index='0'></ionic-ratings><hr>
+<br>
+
+<center>
+     
+     <button class="button button-outline button-assertive" ng-click="update_review(tname, review_edit)" style="color: #88b913; border-color:#88b913;">UPDATE REVIEW</button>&nbsp;&nbsp;&nbsp;
+    </center>
+    
+    </ion-content>
+</ion-view>
+  
+     

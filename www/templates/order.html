@@ -1,0 +1,87 @@
+<ion-view view-title="Add Order" hide-back-button="true">
+
+<ion-nav-bar class="bar-stable">
+      
+       </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+              <button class="button button-icon button-clear ion-android-arrow-back" ng-controller="NavigateCtrl" ng-click="backinfo()">
+              </button>
+  
+          </ion-nav-buttons>
+
+
+<ion-content ng-controller="DashCtrl" class="has-header background" padding="true">
+     
+<br><br>
+<br>
+<br>
+
+
+       
+
+<span style="font-family: helvetica;font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Add Quantity</span>
+<span style="float:right; margin-top: -9px; margin-right: 12px;">
+    <i class="ion-ios-plus-outline" ng-click="add_qty(qty)"></i>
+    <span id="dec" style="color:#f16539;">&nbsp;&nbsp;{{qty}}</span>
+    <i class="ion-ios-minus-outline" ng-click="minus_qty(qty)"></i>
+</span>
+  
+   
+  <br><br>
+  <hr>
+
+   <label class="item item-input item-select">
+    <div class="input-label">
+     <p style="color: #f8f8f8; font-size: inherit;">Select Tiffin</p>
+    </div>
+    <select ng-model="tfnn">
+      <option>Full</option>
+      <option>Half</option>
+     
+    </select>
+  </label>
+
+  
+
+   <label class="item item-input item-select">
+    <div class="input-label">
+     <p style="color: #f8f8f8; font-size: inherit;">Select Time</p>
+    </div>
+    <select ng-model="tym">
+      <option>Lunch</option>
+      <option>Dinner</option>
+      
+    
+     
+    </select>
+     </label>
+
+
+
+   
+    <br>
+
+     <div ng-show="xyz">&nbsp;&nbsp;&nbsp;&nbsp;Full Tifin : Rs.{{fprice}}
+   
+ {{data.name}}
+     
+     &nbsp;&nbsp;&nbsp;&nbsp;Half Tifin : Rs.{{hprice}}
+  
+</div>
+    <br>
+    <br>
+
+<center>
+<button class="button button-outline button-assertive" ng-click="openPopover(qty,tfnn,tym,fprice,hprice)" style="width:93%; margin-left: -5.5px;">
+  Process Next
+</button>
+</center>
+
+
+</p>
+
+
+  </ion-content>
+</ion-view>

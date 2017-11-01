@@ -1,0 +1,37 @@
+<ion-view view-title="Add Review" cache-view="false" hide-back-button="true">
+<ion-nav-bar class="bar-stable">
+      
+       </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+    <button class="button button-icon button-clear ion-android-arrow-back" ng-click="reviewback()">
+    </button>
+  
+</ion-nav-buttons>
+
+ <ion-content class="has-header background">
+    <br><br><br>
+
+  <label class="item item-input" style="border-top-color: transparent;">
+    <input type="text" ng-model="tname" maxlength="15" data-ng-minLength="1" placeholder="Name">
+  </label>
+  <br> 
+    <center> 
+   
+<textarea rows="6" ng-model="rwv" style="font-size:17px; width:90%; background-color: transparent;" placeholder="Tell others what you think about daily food. Would you recommend it, and why?"></textarea>
+ </ion-item>
+   </center>   
+
+   <ionic-ratings ratingsobj='ratingsObject' index='0'></ionic-ratings><hr>
+<br>
+
+<center>
+     
+     <button class="button button-outline button-assertive" ng-click="addreview(tname, rwv)" style="color: #88b913;border-color: #88b913;">POST REVIEW</button>&nbsp;&nbsp;&nbsp;
+    </center>
+    
+    </ion-content>
+</ion-view>
+  
+     

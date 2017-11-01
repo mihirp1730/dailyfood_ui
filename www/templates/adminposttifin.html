@@ -1,0 +1,85 @@
+
+<ion-view title="Daily Food"  cache-view="false" hide-back-button="true">
+
+
+<ion-content ng-controller="DashCtrl" class="background2" padding="true">
+
+<br><br>
+
+    
+  
+ 
+   
+
+       
+ 
+
+   
+   <center><p style="color: #8dc112;">ENTER YOUR MENU</p></center>
+   <hr>
+
+<form ng-submit="Addtfn(roti,qroti,sabji,rice,other,pfull,phalf)">
+ <label class="item-input">
+  <input type="text" placeholder="Roti/Paratha/Thepla" maxlength="70" data-ng-minLength="1" ng-model="roti" style="color: #f8f8f8;">
+  </label>
+  <hr>
+
+ <label class="item-input">
+  <input type="number" placeholder="Quantity Of Roti/Paratha/Thepla" maxlength="10" data-ng-minLength="1" ng-model="qroti" style="color: #f8f8f8;">
+  </label>
+  <hr>
+
+  <label class="item-input">
+  <input type="text" placeholder="Sabzi" maxlength="70" data-ng-minLength="1" ng-model="sabji"
+  style="color: #f8f8f8;">
+  </label>
+  <hr>
+   <label class="item-input">
+  <input type="text" placeholder="Dal Chawal / Dal Fry Chawal / Khichdi Kadhi / Rajwadi Khichdi / Pulav " maxlength="70" data-ng-minLength="1" ng-model="rice" style="color: #f8f8f8;">
+  </label>
+  <hr>
+
+
+   <label class="item-input">
+  <input type="text" placeholder="Other Items" maxlength="70" data-ng-minLength="1" ng-model="other"
+  style="color: #f8f8f8;">
+  </label>
+  <hr>
+
+ 
+
+  
+  <label class="item-input">
+  <input type="number" placeholder="Price of your full tifin" maxlength="5" data-ng-minLength="1" ng-model="pfull" style="color: #f8f8f8;">
+  </label>
+  <hr>
+
+  <label class="item-input">
+  <input type="number" placeholder="Price of your half tifin" maxlength="5" data-ng-minLength="1" ng-model="phalf" style="color: #f8f8f8;">
+  </label>
+  <hr>
+
+<br>
+ 
+ <center>
+<button class="button button-outline button-assertive" type="submit" style="width:93%; margin-left: -11.5px;">
+  ADD TIFIN
+</button>
+</center>
+</form>
+
+        
+</ion-content>   
+
+  
+ 
+ 
+
+
+
+</ion-view>
+
+
+
+      
+    

@@ -1,0 +1,13 @@
+<ion-view view-title="Daily Food" cache-view="false" hide-back-button="true">
+
+
+  <ion-content  class="has-header">
+    <br>
+     <ul class="list">
+                <li class="item" ng-repeat = "data in dash" ng-click="detaildash(data.id)">
+                  {{data.name}}<div ng-show="xxx">{{data.id}}</div>
+                </li>
+          </ul> 
+       <div ng-show="dsh" style="color:red;"><center>No Tifinprovider Request</center></div>
+  </ion-content>
+</ion-view>

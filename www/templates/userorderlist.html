@@ -1,0 +1,82 @@
+<ion-view view-title="Track Order" cache-view="false" hide-back-button="true">
+  <ion-content  class="has-header background" padding="true">
+  <br>
+ <center><h3 style="color:#f16539;">Today's Order</h3></center>
+ <hr style="border-color:#f16539;">
+              
+             
+
+<div ng-show="iii" style="color:red;"><center><p style="color:#f16539;"><br><br>No Order Found</p></center></div>   
+
+<div ng-hide="status">
+           
+   
+       <div ng-repeat="data in confrm">
+
+
+   
+      <p ng-if="data.tfntime==='Dinner'">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8dc112;">Estimated DeliveryTime:</span> <span>{{dinner_estimated}}</span></p>
+
+      <p ng-if="data.tfntime==='Lunch'">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8dc112;">Estimated DeliveryTime:</span> <span>{{lunch_estimated}}</span></p>
+
+      <p ng-if="data.active==='Pending'">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8dc112;">Status:</span> <span style="color: #f16539;">{{data.active}}</span></p>
+
+
+      <p ng-if="data.active==='Processing'">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8dc112;">Status:</span> <span style="color: yellow;">{{data.active}}</span></p>
+
+
+      <p ng-if="data.active==='Dispatched'">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8dc112;">Status:</span> <span style="color: blue;">{{data.active}}</span></p>
+
+
+      <p ng-if="data.active==='Delivered'">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8dc112;">Status:</span> <span style="color: green;">{{data.active}}</span></p>
+
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8dc112;">Quantity:</span> <span>
+      {{data.qty}} {{data.tfntype}} Tiffin</span></p>
+
+
+
+
+   
+           
+               
+
+           
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8dc112;">Tiffin Time:</span>&nbsp;{{data.tfntime}}</p>
+           
+             
+               <p style="font-family: initial;"><h4 style="color:#8dc112;">&nbsp;&nbsp;&nbsp;&nbsp;Included In Tiffin:</h4> 
+                   &nbsp;&nbsp;&nbsp;&nbsp;{{data.rotyquantity}}&nbsp;{{data.rotiname}}<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;{{data.sabjiname}}<br>
+                   &nbsp;&nbsp;&nbsp;&nbsp;{{data.ricename}}<br>
+                   &nbsp;&nbsp;&nbsp;&nbsp;{{data.othername}} 
+                </p>
+           
+      <p ng-if="data.payment_id==='cash'">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8dc112;">Payment Mode:</span> <span>Cash On Delivery</span></p>
+
+      <p ng-if="data.payment_id!='cash'">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8dc112;">Payment Mode:</span> <span>Online</span></p>
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8dc112;">Total Amount:</span>&nbsp;&#8377&nbsp;{{data.price}}</p>
+
+      <p ng-if="data.payment_status==='awaited'">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8dc112;">Payment Status:</span> <span>Awaited</span></p>
+
+      <p ng-if="data.payment_status==='completed'">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8dc112;">Payment Status:</span> <span>Completed</span></p>        
+           
+              <hr style="border-color:#f16539;">
+               
+       
+             
+
+
+            
+
+        <div ng-show="vcv">{{data.id}}</div>
+       </div>
+</div>
+
+
+ 
+       
+  </ion-content>
+</ion-view>
+ 

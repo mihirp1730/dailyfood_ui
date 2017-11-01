@@ -1,0 +1,20 @@
+<ion-view view-title="Daily Food" cache-view="false" hide-back-button="true">
+
+
+  <ion-content  class="has-header">
+ <br>
+          <div class="list card" ng-repeat="data in tfndata">
+              
+           
+                  <button class="button button-outline button-calm" ng-click="invoice(data.name)" style="width:90%;  margin-left: 14px;">
+                   {{data.name}}
+                   </button>
+                      
+              
+
+             
+        
+              
+      </div>     
+  </ion-content>
+</ion-view>

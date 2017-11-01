@@ -1,0 +1,109 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left" >
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+  <ion-nav-view name="menuContent"></ion-nav-view>
+</ion-side-menu-content>
+
+  <ion-side-menu side="left">
+   
+    <ion-content ng-controller="NavigateCtrl" class="background">
+      <ion-list>
+         <ion-item style="background-color: #111; height:133px;">
+           <center><img src="img/logo.png" style="height:131px; margin-top:-18px;"/></center>
+             </ion-item>
+        <ion-item menu-close ng-show="$root.isShowNav" ng-click="chome()" style="height:57px;">
+          <h2 style="color:#f16539; font-size: 17px; margin-top: -8px;"><i class="ion-home"></i> Home</h2>
+        </ion-item>
+
+        <ion-item menu-close ng-show="$root.isShowNav1" ng-click="uorderlist()" style="height:57px;">
+          <h2 style="color:#f16539; font-size: 17px; margin-top: -8px;"><i class="ion-eye"></i> Check Your Order</h2>
+        </ion-item>
+
+         <ion-item menu-close ng-show="$root.isShowNav1CC" ng-click="order_history()" style="height:57px;">
+          <h2 style="color:#f16539; font-size: 17px; margin-top: -8px;"><i class="ion-eye"></i> View previous orders</h2>
+        </ion-item>
+        <!---<ion-item menu-close ng-show="$root.isShowNav2" ng-click="addtfn()" style="height:57px;">
+          <h2 style="color:black; font-size: 17px; margin-top: -8px;"><i class="ion-ios-cart"></i> Want to sell tifin?</h2>
+        </ion-item>-->
+
+        <ion-item menu-close ng-show="$root.isShowNav3" ng-click="orderchk()" style="height:57px;">
+          <h2 style="color:#f16539; font-size: 17px; margin-top: -8px;"><i class="ion-ios-cart"></i> Dashboard</h2>
+        </ion-item>
+
+        <!---<ion-item menu-close ng-show="$root.isShowNav5" ng-click="adhomeas()" style="height:57px;">
+          <h2 style="color:black; font-size: 17px; margin-top: -8px;"><i class="ion-soup-can-outline"></i> Tifin provider request</h2>
+        </ion-item>
+
+         <ion-item menu-close ng-show="$root.isShowNav4" ng-click="planchk()" style="height:57px;">
+          <h2 style="color:black; font-size: 17px; margin-top: -8px;"><i class="ion-ios-list-outline"></i> Customer Plans</h2>
+        </ion-item>-->
+
+         <ion-item menu-close ng-show="$root.isShowNavB" ng-click="orderlist()" style="height:57px;">
+          <h2 style="color:#f16539; font-size: 17px; margin-top: -8px;"><i class="ion-ios-list-outline"></i> Orders List</h2>
+        </ion-item>
+
+        <!---<ion-item menu-close ng-show="$root.isShowNavA" ng-click="adhomedash()" style="height:57px;">
+          <h2 style="color:black; font-size: 17px; margin-top: -8px;"><i class="ion-ios-list-outline"></i> Tifin provider list</h2>
+        </ion-item>-->
+
+         <ion-item menu-close ng-show="$root.isShowNav8" ng-controller= "AdminCtrl" ng-click="despatchedorder()" style="height:57px;">
+          <h2 style="color:#f16539; font-size: 17px; margin-top: -8px;"><i class="ion-ios-cart"></i>Dispatched?</h2>
+        </ion-item>
+
+        <!--- <ion-item menu-close ng-show="$root.isShowNav6" ng-click="addtfn()" style="height:57px;">
+          <h2 style="color:black; font-size: 17px; margin-top: -8px;"><i class="ion-plus"></i> Add new tifin</h2>
+        </ion-item>-->
+
+        <ion-item menu-close ng-show="$root.isShowNav6admin" ng-click="adminaddtfn()" style="height:57px;">
+          <h2 style="color:#f16539; font-size: 17px; margin-top: -8px;"><i class="ion-plus"></i> Add new tifin</h2>
+        </ion-item>
+
+
+         <ion-item menu-close ng-show="$root.isShowNavR1" ng-click="admin_review()" style="height:57px;">
+          <h2 style="color:#f16539; font-size: 17px; margin-top: -8px;"><i class="ion-ios-list-outline"></i> Manage Reviews</h2>
+        </ion-item>
+
+         <ion-item menu-close ng-show="$root.isShowNavT1" ng-click="admin_time()" style="height:57px;">
+          <h2 style="color:#f16539; font-size: 17px; margin-top: -8px;"><i class="ion-ios-list-outline"></i> Manage Time</h2>
+        </ion-item>
+
+        <ion-item menu-close ng-show="$root.isShowNavTE1" ng-click="admin_estimated()" style="height:57px;">
+          <h2 style="color:#f16539; font-size: 17px; margin-top: -8px;"><i class="ion-ios-list-outline"></i> Estimated Delivery Time</h2>
+        </ion-item>
+
+        <!--- <ion-item menu-close ng-show="$root.isShowNav7" ng-controller="BillCtrl" ng-click="list()" style="height:57px;">
+          <h2 style="color:black; font-size: 17px; margin-top: -8px;"><i class="ion-calculator"></i> Bill calculation</h2>
+        </ion-item>-->
+
+
+         <ion-item menu-close ng-show="$root.isShowNavR" ng-controller="ReviewCtrl" ng-click="createdelivery()" style="height:57px;">
+          <h2 style="color:#f16539; font-size: 17px; margin-top: -8px;"><i class="ion-calculator"></i>Create Delivery Boy</h2>
+        </ion-item>
+
+
+         <!---<ion-item menu-close ng-click="admindash()">
+        <i class="ion-person"></i> Admin &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;<i class="ion-ios-locked" style="color:red;"></i>
+        </ion-item>-->
+        <!--- <ion-item menu-close ng-click="about()" style="height:57px;">
+          <h2 style="color:#f16539; font-size: 17px; margin-top: -8px;"><i class="ion-power"></i> About us</h2>
+        </ion-item>-->
+        <ion-item menu-close ng-click="lout()" style="height:57px;">
+          <h2 style="color:#f16539; font-size: 17px; margin-top: -8px;"><i class="ion-power"></i> Logout</h2>
+        </ion-item>
+       
+      
+      </ion-list>
+      
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

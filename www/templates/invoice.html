@@ -1,0 +1,70 @@
+<ion-view view-title="Daily Food" cache-view="false" hide-back-button="true">
+
+
+  <ion-content  class="has-header background2">
+    <br><br><br>
+                
+               
+               <center>
+                <button class="button button-outline button-assertive yourElement animated bounceInLeft" ng-click="onedate()" style="width:93%; margin-left: -1.5px;">
+                 Date Wise Order List
+                </button>
+                 <br><br>
+                 <div ng-show="datewise">  
+              
+
+                   <label class="item item-input item-stacked-label" style="border-color: transparent;">
+                    <span class="input-label">Select Date</span>
+                    <input type="date" ng-model="gdi" style="background-color: #000;">
+                  </label>
+
+                  <center>
+                <button class="button button-outline button-assertive" ng-click="onedatefer(gdi)" style="color: #8dc112; border-color:#8dc112;">View Order List</button>
+                </center>
+
+                <hr>
+
+
+               </div>   
+
+
+                <button class="button button-outline button-assertive yourElement animated bounceInRight" ng-click="betallbill()" style="width:93%; margin-left: -1.5px;">
+                 Weekly, Monthly, Yearly Order List
+                </button>
+                 <br><br>
+                <div ng-show="monthly">  
+              
+
+                   <label class="item item-input item-stacked-label" style="border-color: transparent;">
+                    <span class="input-label">From Date</span>
+                    <input type="date" placeholder="From Date" ng-model="bida" style="background-color: #000;">
+                  </label>
+
+                  <label class="item item-input item-stacked-label" style="border-color: transparent;">
+                   <span class="input-label">To Date</span>
+                    <input type="date" placeholder="To Date" ng-model="bidb" style="background-color: #000;">
+                  </label>
+
+                  <center>
+                 <button class="button button-outline button-assertive" ng-click="betdatefer(bida,bidb)" style="color: #8dc112; border-color:#8dc112;">View Order List</button></center>
+
+                <hr>
+
+
+               </div>
+
+                <button class="button button-outline button-assertive" ng-click="allbill()" style="width:93%; margin-left: -1.5px;">
+                 All Orderlist
+                </button>
+                </center>
+                <br>
+              
+               
+
+              
+            
+
+            
+    
+  </ion-content>
+</ion-view>

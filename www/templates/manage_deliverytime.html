@@ -1,0 +1,61 @@
+<ion-view view-title="Update Time" hide-back-button="true">
+
+
+
+
+<ion-content class="has-header background2" padding="true">
+     
+<br><br>
+
+ 
+  <div class="list" id="thisdiv">
+
+  <form ng-submit="delivery_update(e_lunch,e_tolunch, e_dinner, e_todinner)">
+
+               <h4 style="color:#f16539;">Estimated delivery time for lunch</h4>
+               <hr>
+               
+               <label class="item item-input item-stacked-label" style="border-color: transparent;">
+                    <span class="input-label" style="max-width:400px; color:#8dc112; font-size: 16px;">From
+                    </span>
+                    <input type="time" ng-model="e_lunch" style="background-color: #000;">
+                </label>
+
+                <label class="item item-input item-stacked-label" style="border-color: transparent;">
+                    <span class="input-label" style="max-width:400px; color:#8dc112; font-size: 16px;">To
+                    </span>
+                    <input type="time" ng-model="e_tolunch" style="background-color: #000;">
+                </label>
+
+                <hr>
+
+                <h4 style="color:#f16539;">Estimated delivery time for dinner</h4>
+               <hr>
+               <label class="item item-input item-stacked-label" style="border-color: transparent;">
+                    <span class="input-label" style="max-width:400px; color:#8dc112; font-size: 16px;">From</span>
+                    <input type="time" ng-model="e_dinner" style="background-color: #000;">
+                </label>
+
+                <label class="item item-input item-stacked-label" style="border-color: transparent;">
+                    <span class="input-label" style="max-width:400px; color:#8dc112; font-size: 16px;">To</span>
+                    <input type="time" ng-model="e_todinner" style="background-color: #000;">
+                </label>
+                <hr>
+
+               
+ 
+   <br><br>
+<center>
+<button class="button button-outline button-assertive" type="submit" style="width:93%; margin-left: -5.5px;">
+  UPDATE TIME
+</button>
+</center>
+</form>
+</div>
+
+
+
+
+
+  </ion-content>
+</ion-view>

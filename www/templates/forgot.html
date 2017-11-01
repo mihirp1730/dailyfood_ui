@@ -1,0 +1,94 @@
+
+<ion-view title="Forgot Your Password?" hide-back-button="true">
+
+   <ion-nav-bar class="bar-stable">
+      
+       </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+    <button class="button button-icon button-clear ion-android-arrow-back" ng-click="loginback()">
+    </button>
+  
+          </ion-nav-buttons>
+
+
+<ion-content class="background" padding="true">
+
+<br>
+<br>
+<br>
+<br>
+
+
+<div style="margin-left: 20px;">Enter your e-mail address and we'll send you a password for your account </div>
+
+
+     <form name="authorizationForm" novalidate="">
+ 
+  
+ <br>    
+
+
+<label class="item-input item-floating-label" ng-class="{ 'has-errors' : authorizationForm.password.$invalid  && authorizationForm.$submitted, 'no-errors' : authorizationForm.password.$valid  && authorizationForm.$submitted}">
+    <span class="input-label">E-mail Address</span>
+  <input type="text" id="textboxid2" name="email" placeholder="Enter Valid E-mail Address" ng-model="frgtmail" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" required>
+</label>
+
+<hr>
+   
+   
+
+    
+
+    <div class="error-container last-error-container" ng-show="authorizationForm.email.$error && authorizationForm.$submitted" ng-messages="authorizationForm.email.$error">
+      <div ng-messages-include="error-list.html"></div>
+    </div>
+    
+    
+    
+
+  
+ 
+  </div>
+
+<br>
+  
+ 
+ 
+
+  <center><button class="button button-outline button-assertive" ng-click="bnn(frgtmail)" style="color:#f16539;">
+  SEND E-MAIL
+</button></center>
+
+  
+</form>
+
+
+        </ion-content>
+     
+      <script id="error-list.html" type="text/ng-template"> 
+
+   <div class="error" ng-message="required" style="color:#f16539;">
+      <i class="ion-information-circled"></i>&nbsp; 
+      You have not entered E-mail address!
+    </div>
+
+     <div  class="error" ng-message="pattern" style="color:#f16539;">
+      <i class="ion-information-circled"></i>&nbsp;
+     Enter Valid Email Address!
+    </div>
+    
+
+
+   
+  </script>   
+    
+
+
+</ion-view>
+
+
+
+      
+    

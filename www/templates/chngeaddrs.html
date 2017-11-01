@@ -1,0 +1,75 @@
+
+<ion-view view-title="Change Delivery Address" hide-back-button="true">
+
+  <ion-nav-bar class="bar-stable">
+      
+       </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+    <button class="button button-icon button-clear ion-android-arrow-back" ng-click="cashback()">
+    </button>
+  
+          </ion-nav-buttons>
+
+  <ion-content ng-controller="AppCtrl" class="background" padding="true">
+  <br>
+ 
+  <form ng-submit="changeadd(addchange1, addchange2, addchange3, numberchange)">
+        
+        <div class="list">
+                    
+   
+
+    
+
+
+    <label class="item-input item-floating-label">
+    <span class="input-label" style="color: #f8f8f8;">Address Line 1</span>
+    <input type="text" placeholder="Street/Society" maxlength="30" ng-model="addchange1" style="color: #f8f8f8;">
+    </label>
+   <hr> 
+
+    <label class="item-input item-floating-label">
+    <span class="input-label" style="color: #f8f8f8;">Address Line 2</span>
+    <input type="text" placeholder="Landmark (Popular Area)" maxlength="30" ng-model="addchange2" style="color: #f8f8f8;">
+    </label>
+
+   <hr>
+    <label class="item-input item-floating-label">
+    <span class="input-label" style="color: #f8f8f8;">Address Line 3</span>
+    <input type="text" placeholder="City" maxlength="20" ng-model="addchange3" style="color: #f8f8f8;">
+    </label>
+
+   <hr> 
+
+   <label class="item-input item-floating-label">
+    <span class="input-label" style="color: #f8f8f8;">Mobile Number</span>
+    <input type="tel" placeholder="Mobile Number" maxlength="10" ng-model="numberchange" style="color: #f8f8f8;">
+    </label>
+
+   <hr> 
+
+       </div>
+
+<center><button class="button button-outline button-assertive" type="submit">
+  CHANGE ADDRESS
+</button></center>
+
+
+          
+ 
+
+         </form>
+
+
+
+          
+
+  </ion-content>
+</ion-view>
+
+
+
+      
+    

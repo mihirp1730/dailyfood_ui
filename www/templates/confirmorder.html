@@ -1,0 +1,82 @@
+<ion-view view-title="Verify Your Order" cache-view="false" hide-back-button="true">
+<ion-nav-bar class="bar-stable">
+      
+       </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+			    <button class="button button-icon button-clear ion-android-arrow-back" ng-controller="NavigateCtrl" ng-click="cstmrhomeback()">
+			    </button>
+			  
+          </ion-nav-buttons>
+
+<ion-content  class="has-header background" padding="true">
+
+<br><br>
+   
+    <div  ng-repeat="data in addr">        
+
+            
+               
+              <p>&nbsp;&nbsp;<span style="color:#8dc112;">Tiffin Type:</span>&nbsp;{{tfnn}}</p>
+         
+
+              <hr> 
+              <p>&nbsp;&nbsp;<span style="color:#8dc112;">Tiffin Time:</span>&nbsp;{{tym}}</p>
+           
+              <hr>
+           
+                <p>&nbsp;&nbsp;<span style="color:#8dc112;">No. Of Quantity:</span>&nbsp;{{qntity}}</p>
+       
+
+              <hr>
+
+               <p style="font-family: initial;"><h4 style="color:#8dc112;">&nbsp;&nbsp;Included In Tiffin:</h4> 
+                   &nbsp;&nbsp;{{rotyquantity}}&nbsp;{{rotiname}}<br>
+                   &nbsp;&nbsp;{{sabjiname}}<br>
+                   &nbsp;&nbsp;{{ricename}}<br>
+                   &nbsp;&nbsp;{{othername}} 
+                </p>
+           
+              <hr>
+           
+               
+               <h4 style="color:#8dc112;">&nbsp;&nbsp;Delivery Address:</h4>  
+                <p>&nbsp;&nbsp;{{data.add1}}</p>
+                <p>&nbsp;&nbsp;{{data.add2}}</p>
+                <p>&nbsp;&nbsp;{{data.add3}}</p>
+                <p>&nbsp;&nbsp;Mobile No: {{data.mobnum}}</p>
+                <button class="button button-clear button-assertive" style="float:right; margin-right: 15px; color: #f16539;" ng-click="changeaddress()">
+                &nbsp;&nbsp;Change Address
+                </button>
+                <br><br><br>
+                <hr>
+              <p>&nbsp;&nbsp;<span style="color:#8dc112;">Total Amount:</span>&nbsp;&#8377&nbsp;{{price}}</p>
+           
+              <hr>
+               
+     
+ <!--- <button class="button button-block button-balanced" ng-click="Addorder(name,tfn,plm,qntity,price)" style="width:100%;margin-left:0px;">
+  Confirm Order
+</button>-->
+<br>
+<center>
+<button class="button button-outline button-assertive" ng-click="Addorder(name,data.add1,data.add2,data.add3,data.mobnum,rotyquantity,rotiname,sabjiname,ricename,othername,tfnn,tym,qntity,price)" style="width:93%; margin-left: -1.5px;">
+  CASH ON DELIVERY
+</button>
+<br><br>
+<button class="button button-outline button-assertive" ng-click="payment(name,data.add1,data.add2,data.add3,data.mobnum,rotyquantity,rotiname,sabjiname,ricename,othername,tfnn,tym,qntity,price)" style="width:93%; margin-left: -1.5px;">
+  PAY ONLINE
+</button>
+</center>
+    </div>
+    </div>
+    
+     
+    
+
+
+ </ion-content>  
+
+</ion-content>
+</ion-view>

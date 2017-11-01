@@ -1,0 +1,85 @@
+
+<ion-view title="Daily Food" hide-back-button="true">
+
+   <ion-nav-bar class="bar-stable">
+      
+       </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+               <button class="button button-icon button-clear ion-android-arrow-back" ng-controller="NavigateCtrl" ng-click="invoice1()">
+              </button>
+            
+          </ion-nav-buttons>
+
+
+<ion-content ng-controller="BillCtrl">
+     
+
+<div ng-show="kkk">
+<div ng-repeat="data in billdata">
+          <div class="list card">
+              <div class="item item-text-wrap">
+             
+                
+                <p>Date: {{data.cdate}}<br>
+                 Customer: {{data.uname}}<br>
+                 Ordered {{data.qty}} {{data.tfntype}} tifin for {{data.tfntime}}
+                 Amount: Rs. {{data.price}}</p>  
+
+              </div>
+
+
+          </div>
+   </div>
+</div> 
+       <div ng-show="lll">
+         <div class="card">
+              <div class="item item-text-wrap">
+               <p>Total Amount: Rs. {{total}}</p>
+               <i class="ion-edit" ng-click="editt()"></i>
+
+                <label ng-show="per" class="item item-input item-select" >
+                <div class="input-label">
+                <p>Select percentage</p>
+                </div>
+                <select ng-model="perc">
+                  <option selected>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+                  
+                </select>
+              </label>
+
+                
+                <button ng-show="calc" class="button button-clear button-positive"  ng-click="percntage(total,perc)">
+                calculate
+                </button>
+                <p ng-show="adpmnt">Your payment is Rs.{{adpay}}<br>
+                 Tifin provider payment: Rs.{{tfnpay}}</p>
+
+
+  <button ng-show="invice" class="button button-block button-calm" ng-controller="AppCtrl" ng-click="maildaily(adpay)" style="width: :97%;">
+         Send 
+         </button>
+             
+            </div>
+        </div>
+      </div>
+      <br><br> <br>
+  <div ng-show="nrr"><center style="color:red;">No Records Found</center></div>
+</ion-content>
+
+</ion-view>
+
+
+
+      
+    

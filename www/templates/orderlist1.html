@@ -1,0 +1,51 @@
+<ion-view view-title="Order List" cache-view="false" hide-back-button="true">
+   
+ <ion-nav-bar class="bar-stable">
+      
+       </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+          <button class="button button-icon button-clear ion-android-arrow-back" ng-controller="NavigateCtrl" ng-click="invoice()">
+          </button>
+        
+          </ion-nav-buttons>
+  <ion-content  class="has-header background">
+
+   <br> <br>
+     
+<div ng-show="zbill">
+  <h4 style="margin-left: 19px;"><span style="color:#f16539;"><b>Total Order:<b></span> {{admintotal}}</h4>
+  <h4 style="margin-left: 19px;"><span style="color:#f16539;"><b>Total Earning:<b></span>&#8377&nbsp;{{billdata}}</h4>
+  
+
+  <hr>    
+     
+     
+            
+
+    <div ng-repeat ="data in dashorder">
+                  <p style="margin-left: 19px;">Customer Name: {{data.uname}}</p>
+                  <!---<b>Seller  :</b> {{data.csname}}<br>-->
+                  <P style="margin-left: 19px;">Order Date: {{data.cdate}} </P>
+                  <P style="margin-left: 19px;">Order Time: {{data.ctime}} </P>
+                   <P style="margin-left: 19px;">Mobile Number: {{data.add4}} </P>
+                  <P style="margin-left: 19px;">Total Amount: <i class="fa fa-inr"></i>&nbsp;{{data.price}} </P>
+                  <P style="margin-left: 19px;">Ordered {{data.qty}} {{data.tfntype}} tifin for {{data.tfntime}}</P>
+                  <div ng-show="ccv">{{data.id}}</div>
+                  <hr>
+                
+     </div>
+
+     <ion-infinite-scroll
+    on-infinite="loadMore()"
+    distance="1%">
+  </ion-infinite-scroll>
+   
+             
+</div>
+           <br><br><br><br>
+          <div ng-show="avg" style="color:#f16539;"><center><b>No Order Found<b></center></div>
+
+   </ion-content>
+ </ion-view>

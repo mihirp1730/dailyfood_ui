@@ -1,0 +1,181 @@
+<ion-view view-title="Menu" hide-back-button="true">
+
+<ion-nav-bar class="bar-stable">
+      
+       </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+    <button class="button button-icon button-clear ion-android-arrow-back" ng-controller="NavigateCtrl" ng-click="cstmrhomeback()">
+    </button>
+  
+</ion-nav-buttons>
+     <ion-content ng-controller="DashCtrl" class="has-header">
+          <div ng-repeat="data in detailcxm">  
+
+        <ion-slide-box slide-interval="2000" does-continue="true"
+                               auto-play="true" style="height:250px; background-color: black;">  
+ 
+        <ion-slide>
+            <center><img src="img/f6.png" style="height:200px;" class="fullscreen-image"></center>
+        </ion-slide>
+        <ion-slide>
+            <center><img src="img/f8.png" class="fullscreen-image"></center>
+        </ion-slide>
+        <ion-slide>
+            <center><img src="img/f3.png" class="fullscreen-image"></center>
+        </ion-slide>
+</ion-slide-box>  
+      <!--- <ion-slide-box does-continue="true" auto-play="false" style="height:250px; background-color: black;">  
+  
+<ion-slide>
+  <br><br>
+    <a class="item item-avatar" style="background-color: black; border-color: black;">
+       <img ng-src="img/f9.png" style="border-radius:50%;  min-height: 116px;
+       min-width: 100px;">
+       <h2 style="color:#88b913; margin-left: 90px;">Monday menu</h2>
+       <p style="color:#f8f8f8; margin-left: 90px;"><img ng-src="img/roti.png"> Roti: {{data.roti}}</p>
+       <p style="color:#f8f8f8; margin-left: 90px;"><img ng-src="img/sabji.png"> Sabji: {{data.sabji}}</p>
+       <p style="color:#f8f8f8; margin-left: 90px;"><img ng-src="img/rice.png"> {{data.rice}}</p>
+       <p style="color:#f8f8f8; margin-left: 90px;"><img ng-src="img/other.png"> {{data.other}}</p>
+    </a>
+</ion-slide>
+
+<ion-slide>
+  <br><br>
+    <a class="item item-avatar" style="background-color: black; border-color: black;">
+       <img ng-src="img/f8.png" style="border-radius:50%;  min-height: 116px;
+       min-width: 100px;">
+       <h2 style="color:#88b913; margin-left: 76px;">Tuesday menu</h2>
+       <p style="color:#f8f8f8; margin-left: 76px;"> Roti: {{data.tuesroti}}</p>
+       <p style="color:#f8f8f8; margin-left: 76px;">Sabji: {{data.tuessabji}}</p>
+       <p style="color:#f8f8f8; margin-left: 76px;">{{data.tuesrice}}</p>
+       <p style="color:#f8f8f8; margin-left: 76px;">{{data.tuesother}}</p>
+    </a>
+</ion-slide>
+
+<ion-slide>
+  <br><br>
+    <a class="item item-avatar" style="background-color: black; border-color: black;">
+       <img ng-src="img/f6.png" style="border-radius:50%;  min-height: 116px;
+       min-width: 100px;">
+       <h2 style="color:#88b913; margin-left: 76px;">Wednesday menu</h2>
+       <p style="color:#f8f8f8; margin-left: 76px;"> Roti: {{data.wedroti}}</p>
+       <p style="color:#f8f8f8; margin-left: 76px;">Sabji: {{data.wedsabji}}</p>
+       <p style="color:#f8f8f8; margin-left: 76px;">{{data.wedrice}}</p>
+       <p style="color:#f8f8f8; margin-left: 76px;">{{data.wedother}}</p>
+    </a>
+</ion-slide>
+
+
+<ion-slide>
+  <br><br>
+    <a class="item item-avatar" style="background-color: black; border-color: black;">
+       <img ng-src="img/f2.png" style="border-radius:50%;  min-height: 116px;
+       min-width: 100px;">
+       <h2 style="color:#88b913; margin-left: 76px;">Thursday menu</h2>
+       <p style="color:#f8f8f8; margin-left: 76px;"> Roti: {{data.thuroti}}</p>
+       <p style="color:#f8f8f8; margin-left: 76px;">Sabji: {{data.thusabji}}</p>
+       <p style="color:#f8f8f8; margin-left: 76px;">{{data.thurice}}</p>
+       <p style="color:#f8f8f8; margin-left: 76px;">{{data.thuother}}</p>
+    </a>
+</ion-slide>
+
+
+<ion-slide>
+  <br><br>
+    <a class="item item-avatar" style="background-color: black; border-color: black;">
+       <img ng-src="img/f4.png" style="border-radius:50%;  min-height: 116px;
+       min-width: 100px;">
+       <h2 style="color:#88b913; margin-left: 76px;">Friday menu</h2>
+       <p style="color:#f8f8f8; margin-left: 76px;"> Roti: {{data.friroti}}</p>
+       <p style="color:#f8f8f8; margin-left: 76px;">Sabji: {{data.frisabji}}</p>
+       <p style="color:#f8f8f8; margin-left: 76px;">{{data.fririce}}</p>
+       <p style="color:#f8f8f8; margin-left: 76px;">{{data.friother}}</p>
+    </a>
+</ion-slide>
+
+
+<ion-slide>
+  <br><br>
+    <a class="item item-avatar" style="background-color: black; border-color: black;">
+       <img ng-src="img/f5.png" style="border-radius:50%;  min-height: 116px;
+       min-width: 100px;">
+       <h2 style="color:#88b913; margin-left: 76px;">Saturday menu</h2>
+       <p style="color:#f8f8f8; margin-left: 76px;"> Roti: {{data.satroti}}</p>
+       <p style="color:#f8f8f8; margin-left: 76px;">Sabji: {{data.satsabji}}</p>
+       <p style="color:#f8f8f8; margin-left: 76px;">{{data.satrice}}</p>
+       <p style="color:#f8f8f8; margin-left: 76px;">{{data.satother}}</p>
+    </a>
+</ion-slide>    
+        
+    </ion-slide-box>-->
+    
+  </div> 
+ <div ng-repeat="data in detailcxm">
+  
+<br><br>
+     
+     <div class="card">
+     <p style="font-family: initial;">&nbsp;&nbsp;Seller: {{data.name}}
+     </p></div>
+
+     <div class="card">
+     <p style="font-family: initial;">&nbsp;&nbsp;From: {{data.city}}
+     </p></div>
+
+     <div class="card">
+     <p style="font-family: initial;">&nbsp;&nbsp;Half Tifin Price: INR {{data.hprice}} 
+     </p></div>
+
+     <div class="card">
+     <p style="font-family: initial;">&nbsp;&nbsp;Full Tifin Price: INR {{data.fprice}} 
+     </p></div>
+
+     <div class="card">
+     <p style="font-family: initial;"><h4>&nbsp;&nbsp;Included In Tifin:</h4> 
+     &nbsp;&nbsp;{{data.qroti}}&nbsp;{{data.roti}}<br>
+     &nbsp;&nbsp;{{data.sabji}}<br>
+     &nbsp;&nbsp;{{data.rice}}<br>
+     &nbsp;&nbsp;{{data.other}} 
+     </p></div>
+
+   
+     <div ng-show="ddd">{{data.id}}</div>
+     <br>
+     <center>
+     <button class="button button-outline" ng-click="order(data.id, data.qroti, data.roti, data.sabji, data.rice, data.other)" style="width:94%; background-color:#88b913; color:#f8f8f8; border-color: #88b913;">
+     Order Now
+    </button>
+    </center>
+ 
+
+
+                  
+
+<!---<div class="card">
+     <p style="font-family: initial;">&nbsp;&nbsp;Do you want to book your tifin for more than 2 days?</p>
+<br>
+<center>
+      <button class="button button-outline" ng-click="apln(data.id)" style="width:94%; background-color:#88b913; color:#f8f8f8; border-color: #88b913;">         
+      Book Here
+      </button>
+ </center>    
+</div>---->
+<br>
+<button class="button button-clear button-assertive" ng-controller="ReviewCtrl" ng-click="reviewpage(data.name, data.city)" style="float:right; margin-right: 15px;">
+  <i class="ion-edit"></i>&nbsp;&nbsp;Write a Review
+</button>
+<br><br><br>
+</div> 
+<div class="card" ng-repeat="rev in review">
+
+<b>&nbsp;&nbsp;{{rev.cname}}</b><rating ng-model="rev.rating" max="rating.max" style="margin-top: -27px; float:right;
+margin-right: 18px; height:5px;"></rating><br><br>
+<p>&nbsp;&nbsp;{{rev.review}}</p>
+
+</div>
+
+
+</ion-content>
+</ion-view>

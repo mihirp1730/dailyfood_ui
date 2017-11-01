@@ -1,0 +1,26 @@
+<ion-view view-title="Review" cache-view="false" hide-back-button="true">
+
+
+  <ion-content  class="has-header background">
+    <br>
+     
+          
+              <ion-list ng-repeat="data in tfndata">
+                <ion-item class="item item-avatar item-thumbnail-left" ng-click="detailreview(data.name)">  
+                <img ng-src="img/logo.png" style="border-radius:50%;">
+                <p><h2 style="color:black; margin-top: 13px">Seller: {{data.name}}</h2></p> 
+                <p style="color:gray;">From: {{data.city}}</p>
+                <p>{{data.rating}}</p>
+                <ionic-ratings ratingsobj='ratingsObject1' index='0' style="width:182px; margin-top: -35px;"></ionic-ratings>
+                <div ng-show="bvc">{{data.id}}</div>               
+                </ion-item>
+                </ion-list>
+
+               <div ng-show="xxx">{{name}}</div>
+
+             
+ 
+          </div>
+    
+  </ion-content>
+</ion-view>

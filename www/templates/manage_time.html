@@ -1,0 +1,71 @@
+<ion-view view-title="Update Time" hide-back-button="true">
+
+
+
+
+<ion-content class="has-header background2" padding="true">
+     
+<br><br>
+
+ 
+  <div class="list" id="thisdiv">
+
+  <form ng-submit="time_update(d_lunch,d_tolunch, o_lunch, d_dinner, d_todinner, o_dinner)">
+
+               <h4 style="color:#f16539;">Delivery time for lunch</h4>
+               <hr>
+               
+               <label class="item item-input item-stacked-label" style="border-color: transparent;">
+                    <span class="input-label" style="max-width:400px; color:#8dc112; font-size: 16px;">From
+                    </span>
+                    <input type="time" ng-model="d_lunch" style="background-color: #000;">
+                </label>
+
+                <label class="item item-input item-stacked-label" style="border-color: transparent;">
+                    <span class="input-label" style="max-width:400px; color:#8dc112; font-size: 16px;">To
+                    </span>
+                    <input type="time" ng-model="d_tolunch" style="background-color: #000;">
+                </label>
+
+                <hr>
+               <label class="item item-input item-stacked-label" style="border-color: transparent;">
+                    <span class="input-label" style="max-width:400px; color:#8dc112; font-size: 16px;">Order time for lunch</span>
+                    <input type="time" ng-model="o_lunch" style="background-color: #000;">
+                </label>
+
+                <hr>
+
+                <h4 style="color:#f16539;">Delivery time for dinner</h4>
+               <hr>
+               <label class="item item-input item-stacked-label" style="border-color: transparent;">
+                    <span class="input-label" style="max-width:400px; color:#8dc112; font-size: 16px;">From</span>
+                    <input type="time" ng-model="d_dinner" style="background-color: #000;">
+                </label>
+
+                <label class="item item-input item-stacked-label" style="border-color: transparent;">
+                    <span class="input-label" style="max-width:400px; color:#8dc112; font-size: 16px;">To</span>
+                    <input type="time" ng-model="d_todinner" style="background-color: #000;">
+                </label>
+                <hr>
+
+               <label class="item item-input item-stacked-label" style="border-color: transparent;">
+                    <span class="input-label" style="max-width:400px; color:#8dc112; font-size: 16px;">Order time for dinner</span>
+                    <input type="time" ng-model="o_dinner" style="background-color: #000;">
+                </label>
+ 
+ 
+   <br><br>
+<center>
+<button class="button button-outline button-assertive" type="submit" style="width:93%; margin-left: -5.5px;">
+  UPDATE TIME
+</button>
+</center>
+</form>
+</div>
+
+
+
+
+
+  </ion-content>
+</ion-view>

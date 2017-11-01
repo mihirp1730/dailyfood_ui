@@ -1,0 +1,53 @@
+<ion-view view-title="ORDER SUMMARY" cache-view="false" hide-back-button="true">
+
+
+   
+  <ion-content  class="background2" padding="true">
+  <br>
+<div class="list">
+
+
+ <h3 style="color:#f16539;">ORDER SUMMARY<i ng-controller="AppCtrl" ng-click="loginback()" style="float: right; margin-top: -3px; margin-right: 25px;" class="ion-power"></i></h3>
+
+<hr style="border-color:#f16539;">
+<br>
+
+<center>
+<button class="button button-outline button-assertive" ng-click="despatchedorder()" style="width:93%; margin-left: -6.5px; color: #8dc112; border-color:#8dc112;">
+  Click here when you go for delivery
+</button></center>
+<br><br>
+      <!---<ul class="list">
+                <li class="item" ng-repeat = "data in atfn" ng-click="orderdetail(data.id)">
+                  {{data.uname}} request {{data.csname}} Tifin<div ng-show="ccv">{{data.id}}</div>
+                </li>
+          </ul>-->
+ 
+  
+
+  <p>&nbsp;&nbsp;&nbsp;Full Tifin: {{fullboy}}</p>
+  <p>&nbsp;&nbsp;&nbsp;Half Tifin: {{halfboy}}</p>
+
+  <hr>
+  <p>&nbsp;&nbsp;&nbsp;Total Number Of Order: {{totalboy}}</p>
+  <hr>
+  <center><h3 style="color:#f16539;">TODAY'S CUSTOMER</h3></center>
+  <hr>
+<br>
+  
+<div class = "card list" id = "bbb" ng-repeat="data in atfn_boy" style="background-color: #282827;">
+  <a class="item item-icon-right" ng-click="orderdetail_boy(data.id)">
+   
+    {{data.uname}}<span style="float:right; color:#f16539;">{{data.active}}</span>
+   
+    <i class="icon ion-arrow-right-b"></i>
+  </a>
+</div>
+
+
+
+           <br><br><br><br>
+          <div ng-show="alrtboy" style="color:#f16539;"><center>No Order Request</center></div>
+</div>
+   </ion-content>
+ </ion-view>

@@ -1,0 +1,309 @@
+/* Empty. Add your own CSS if you like */
+.item-width {
+  width:97.2%;
+  line-height:2;
+  padding-left: 11px;
+  height:36px;
+  
+}
+
+.spinner svg {
+  width: 19% !important;
+  height: 85px !important;
+  margin-top: 250px;
+}
+
+ul.rating li {
+  display: inline;
+  border: 0px;
+  background: none;
+  
+}
+
+
+.gen_btn{
+    padding:5px;
+    background-color:#743ED9;
+    color:white;
+    font-family:arial;
+    font-size:13px;
+    border:2px solid black;
+}
+
+.gen_btn:hover{
+    background-color:#9a64ff;
+}
+
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+For example, you might change some of the default colors:
+*/
+.ionic_timepicker_popup .font_28px {
+  font-size: 28px;
+}
+.ionic_timepicker_popup .margin_zero {
+  margin: 0;
+}
+.ionic_timepicker_popup .padding_zero {
+  padding: 0;
+}
+.ionic_timepicker_popup .popup {
+  background-color: red;
+}
+.ionic_timepicker_popup .popup-head {
+  display: none;
+}
+.ionic_timepicker_popup .popup-body {
+  padding: 0;
+}
+.ionic_timepicker_popup .popup-buttons {
+  padding: 0;
+  min-height: 44px;
+  height: 44px;
+}
+.ionic_timepicker_popup .popup-buttons .button:not(:last-child) {
+  margin-right: 1px;
+}
+.ionic_timepicker_popup .padding_left_15px {
+  padding-left: 15px;
+}
+.ionic_timepicker_popup .heading {
+  height: 44px;
+  background-color: #000;
+  color: #ffffff;
+  text-align: center;
+  line-height: 44px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.ionic_timepicker_popup .time_picker_colon {
+  padding-top: 45px;
+  text-align: center;
+  font-weight: bold;
+}
+.ionic_timepicker_popup .time_picker_arrows {
+  width: 100%;
+}
+.ionic_timepicker_popup .time_picker_box_text {
+  height: 40px;
+  text-align: center;
+  border: 1px solid #dddddd;
+  font-size: 16px;
+  line-height: 38px;
+}
+.ionic_timepicker_popup .overflowShow {
+  white-space: normal !important;
+}
+.ionic_timepicker_popup .button_set, .ionic_timepicker_popup .button_close {
+  background-color: #000;
+  color: #ffffff;
+}
+
+
+ol, ul {
+  list-style: none;
+}
+
+
+ .red:before {
+    color: red;
+    }
+
+    .green:before {
+    color: green;
+    }
+
+    .flex_row {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row; 
+    flex-direction: row;
+    float:right;
+    }
+
+
+ul.rating li i {
+  font-size: 30px;
+}
+
+
+.yourElement {
+  animation-duration: 20s;
+  animation-delay: 1s;
+  
+}
+
+.h4{
+  font-family: Calibri;
+}
+
+.homeElement {
+  animation-duration: 4s;
+  animation-delay: 1s;
+  
+}
+
+  .ccc {
+    background-image: url('img/logo.png') !important;
+    background-size: cover !important;
+  }
+.fullscreen-image {
+  max-width: 100%;
+  max-height: 100%;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.bgh {
+    background: url('../img/logo.png')no-repeat;
+    background-size: cover;
+    display: block;
+    
+}
+
+ .background.scroll-content {
+    background: url('../img/home.png')no-repeat;
+    background-size: cover;
+    
+}
+
+ .background1.scroll-content {
+    background: url('../img/lg1.png')no-repeat;
+    background-size: cover;
+    
+}
+
+ .background2.scroll-content {
+    background: url('../img/lg2.png')no-repeat;
+    background-size: cover;
+    
+}
+
+ 
+
+.codeqr
+{
+
+margin-left: 11px;
+   
+}
+
+
+.icon-slide
+{
+  
+  color:red;
+}
+.item-height{
+   
+   width:98%;
+   line-height:2;
+
+}
+
+.platform-android .header-item.title {
+    transition-duration: 0ms;
+}
+.platform-android .header-item.buttons {
+    transition-duration: 0ms;
+}
+
+.hedr
+{
+
+    background-color: black;
+}
+
+
+.item-opi
+
+{
+
+  border: 1px solid black;
+    border-collapse: separate;
+     padding: 5px;
+    text-align: left;
+    width:100%;
+   
+   
+
+}
+
+table {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin:0;
+    padding:0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table tr {
+    border: 1px solid #b2b2b2;
+    padding: 5px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background-color: #3DC195;
+}
+
+table td {
+   
+    background-color: white;
+}
+
+.org{
+  color: #f16539;
+}
+
+.prt{
+  color:#8dc112;
+}
+
+.error-container {
+  margin: 5px 0;
+}
+ 
+.error-container:last-child {
+    margin: 5px 0 0;
+}
+ 
+.error {
+  padding: 10px 16px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #555;
+  vertical-align: middle;
+}
+ 
+.error i {
+  font-size: 24px;
+  color: #B83E2C;  
+  vertical-align: middle;
+}
+ 
+.last-error-container > .error {
+  padding: 10px 16px 0;
+}
+ 
+.has-errors {
+  border-bottom: 3px solid #B83E2C;
+}
+ 
+.no-errors {
+  border-bottom: 3px solid green;
+}

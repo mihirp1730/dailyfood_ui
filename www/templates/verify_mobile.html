@@ -1,0 +1,48 @@
+
+<ion-view view-title="Verify Moibile Number" hide-back-button="true">
+
+  <ion-nav-bar class="bar-stable">
+      
+       </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+    
+    <button class="button button-icon button-clear ion-android-arrow-back" ng-controller="AppCtrl" ng-click="newuser()">
+    </button>
+  
+          </ion-nav-buttons>
+
+  <ion-content ng-controller="AppCtrl" class="background">
+  <br><br>
+ 
+          <form ng-submit="otp_verify_status11(otp)"> 
+        <div class="list">
+        <center>
+       
+                      <label class="item item-input item-floating-label" style="width:90%">
+                      <span class="input-label" style="margin-left: -303px;">OTP</span>
+                      <input type="tel" ng-model="otp" placeholder="OTP" maxlength="6" style="margin-left: -71px;">
+                    </label>
+                    </center>
+                                        <br><br>
+
+<center>
+<button class="button button-outline button-assertive" type="submit" style="width:90%; margin-left: -6.5px;">
+  VERIFY
+</button>
+
+
+</center>
+
+
+
+</div>
+</form>
+
+</ion-content>
+</ion-view>
+
+
+
+      
+    

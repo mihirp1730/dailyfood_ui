@@ -1,0 +1,36 @@
+<ion-view view-title="Reviews" cache-view="false" hide-back-button="true">
+
+
+ <ion-content class="has-header background2">
+    <br><br><br>
+    <!--- <p style="float:right; margin-right: 15px;">Total Reviews: {{reviewnum}}</p>-->
+
+
+  <div ng-repeat="rev in review">
+  <br>
+<span style="margin-left: 19px;">{{rev.tname}}</span>
+  <rating ng-model="rev.rating" max="rating.max" style="margin-top: -27px; float:right;
+margin-right: 18px; height:5px; color:#f16539;"></rating>
+
+<br><br>     
+  <p style="margin-left: 19px;">{{rev.review}}</p><br>
+  <button class="button button-clear button-assertive" ng-controller="ReviewCtrl" ng-click="edit_review(rev.tname, rev.review)" style="float:right; margin-right: 28px; margin-top: -24px; color: #f16539;">
+  <i class="ion-edit"></i>&nbsp;&nbsp;Edit
+</button>
+<br>
+  <hr>
+  </div>
+
+  <span ng-show="reviewpages">{{reviewpage}}</span>
+
+     <ion-infinite-scroll
+    on-infinite="loadMorereview(reviewpage)"
+  icon="ion-loading-c"
+    distance="5%">
+  </ion-infinite-scroll>
+
+    </ion-content>
+  
+</ion-view>
+  
+     

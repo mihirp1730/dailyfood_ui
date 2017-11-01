@@ -1,0 +1,13 @@
+<ion-view view-title="Tifin Provider Request" cache-view="false" hide-back-button="true">
+
+
+  <ion-content  class="has-header">
+    <br>
+     <ul class="list">
+                <li class="item" ng-repeat = "data in cxm" ng-click="detail(data.id)">
+                  {{data.name}} Want to post Tifin<div ng-show="xxx">{{data.id}}</div>
+                </li>
+          </ul> 
+       <div ng-show="aaa" style="color:red;"><center>No Tifinprovider Request</center></div>
+  </ion-content>
+</ion-view>
